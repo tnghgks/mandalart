@@ -9,7 +9,6 @@ export default function LadingClient() {
   const router = useRouter();
 
   const handleStart = () => {
-    console.log("@@@@@@@@start");
     router.push("/mandalart");
   };
 
@@ -41,7 +40,7 @@ export default function LadingClient() {
   };
 
   return (
-    <main className="flex flex-col items-center pt-48 pb-20">
+    <main className="flex flex-col items-center pt-40 pb-20">
       {/* Badge */}
       <div className="mb-6 flex items-center gap-2 rounded-full bg-[#1C1027] px-4 py-1.5 ring-1 ring-[#7C3AED]/20">
         <div className="h-1.5 w-1.5 rounded-full bg-[#A78BFA]"></div>
@@ -51,7 +50,7 @@ export default function LadingClient() {
       </div>
 
       {/* Title */}
-      <h1 className="max-w-4xl text-center font-outfit text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-[80px]">
+      <h1 className="font-outfit max-w-4xl text-center text-5xl leading-[1.05] font-bold tracking-tight text-white md:text-[80px]">
         꿈을 9×9로
         <br />
         쪼개면, 현실이
@@ -87,7 +86,7 @@ export default function LadingClient() {
       </div>
 
       {/* Mandalart */}
-      <div className="w-full h-full flex items-center justify-center mt-5">
+      <div className="mt-10 flex h-full w-full items-center justify-center">
         <Mandalart />
       </div>
 
