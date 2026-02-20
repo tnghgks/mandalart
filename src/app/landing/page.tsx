@@ -1,19 +1,5 @@
-import React from "react";
-import Header from "./_components/Header";
-import HeroSection from "./_components/HeroSection";
-import Footer from "./_components/Footer";
+import LadingClient from "./LadingClient";
 
-export default function Landing() {
-  return (
-    <div className="min-h-screen bg-[#09090B] font-sans text-white selection:bg-[#7C3AED] selection:text-white">
-      {/* Navigation Bar */}
-      <Header />
-
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Footer */}
-      <Footer />
-    </div>
-  );
+export default function LandingPage() {
+  return <LadingClient />;
 }

@@ -3,19 +3,14 @@
 import Mandalart from "@/components/Mandalart";
 import { driver } from "driver.js";
 import "driver.js/dist/driver.css";
+import { useRouter } from "next/navigation";
 
-export default function HeroSection() {
+export default function LadingClient() {
+  const router = useRouter();
+
   const handleStart = () => {
-    const driverObj = driver();
-
-    driverObj.highlight({
-      element: "#Mandalart-cell-4-4",
-      onHighlighted: (element: Element | undefined) => {
-        if (element instanceof HTMLElement) {
-          element.focus();
-        }
-      },
-    });
+    console.log("@@@@@@@@start");
+    router.push("/mandalart");
   };
 
   const handleTutorial = () => {
