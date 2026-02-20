@@ -35,6 +35,7 @@ export default function Mandalart() {
                   }
                   return (
                     <Box
+                      id={`Mandalart-cell-${grid_index}-${cell_index}`}
                       key={cell_index}
                       className="h-full w-full bg-gray-400 outline-none whitespace-pre-wrap wrap-break-word"
                       contentEditable={true}
