@@ -7,18 +7,20 @@ export default function Mandalart() {
   return (
     <Grid className="h-240 w-full max-w-7xl bg-[#18181B]">
       <>
-        {Array.from({ length: 9 }).map((_, index) => {
+        {Array.from({ length: 9 }).map((_, grid_index) => {
           return (
             <Grid
-              key={index}
+              key={grid_index}
+              id={`Mandalart-grid-${grid_index}`}
               className="h-full w-full bg-[#18181B] rounded-2xl p-0"
             >
               <>
-                {Array.from({ length: 9 }).map((_, index) => {
-                  if (index === 4) {
+                {Array.from({ length: 9 }).map((_, cell_index) => {
+                  if (cell_index === 4) {
                     return (
                       <Box
-                        key={index}
+                        key={cell_index}
+                        id={`Mandalart-cell-${grid_index}-${cell_index}`}
                         className="h-full w-full bg-[#7C3AED] outline-none whitespace-pre-wrap wrap-break-word"
                         contentEditable={true}
                         suppressContentEditableWarning={true}
@@ -33,8 +35,14 @@ export default function Mandalart() {
                   }
                   return (
                     <Box
-                      key={index}
-                      className="h-full w-full bg-gray-400"
+                      key={cell_index}
+                      className="h-full w-full bg-gray-400 outline-none whitespace-pre-wrap wrap-break-word"
+                      contentEditable={true}
+                      suppressContentEditableWarning={true}
+                      onInput={(e) => console.log(e.currentTarget.textContent)}
+                      onBlur={(e) =>
+                        console.log("저장:", e.currentTarget.textContent)
+                      }
                     ></Box>
                   );
                 })}

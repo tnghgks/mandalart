@@ -1,6 +1,21 @@
+"use client";
+
 import Mandalart from "@/components/Mandalart";
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
 
 export default function HeroSection() {
+  const handleStart = () => {
+    const driverObj = driver();
+    driverObj.highlight({
+      element: "#Mandalart-cell-4-4",
+      popover: {
+        title: "1. 첫번째",
+        description: "메인 목표를 설정합니다.",
+      },
+    });
+  };
+
   return (
     <main className="flex flex-col items-center pt-48 pb-20">
       {/* Badge */}
@@ -33,7 +48,10 @@ export default function HeroSection() {
 
       {/* CTA Buttons */}
       <div className="flex flex-col items-center gap-4 sm:flex-row">
-        <button className="rounded-xl bg-[#7C3AED] px-8 py-4 text-[17px] font-semibold text-white transition-all hover:bg-[#6D28D9]">
+        <button
+          className="rounded-xl bg-[#7C3AED] px-8 py-4 text-[17px] font-semibold text-white transition-all hover:bg-[#6D28D9]"
+          onClick={handleStart}
+        >
           시작하기
         </button>
         <button className="flex items-center gap-2 rounded-xl bg-[#18181B] px-8 py-4 text-[17px] font-medium text-zinc-400 transition-all hover:bg-[#27272A] hover:text-white">
