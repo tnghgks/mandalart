@@ -1,4 +1,4 @@
-import Mandalart from "@/components/Mandalart";
+import Mandalart from "@/features/mandalart/components/Mandalart";
 
 export default function MandalartPage() {
   return (

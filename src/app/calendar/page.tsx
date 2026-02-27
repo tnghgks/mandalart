@@ -1,5 +1,9 @@
-import CalendarClient from "./CalendarClient";
+import { Calendar } from "@/features/calendar";
 
 export default function CalendarPage() {
-  return <CalendarClient />;
+  return (
+    <div className="p-5 py-40">
+      <Calendar />
+    </div>
+  );
 }

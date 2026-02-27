@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${inter.variable} font-sans antialiased bg-[#09090B]`}
+        className={`${outfit.variable} ${inter.variable} bg-[#09090B] font-sans antialiased`}
       >
         <div className="min-h-screen font-sans text-white selection:bg-[#7C3AED] selection:text-white">
           {/* Navigation Bar */}
