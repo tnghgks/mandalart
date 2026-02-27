@@ -86,7 +86,7 @@ export default function LadingClient() {
       </div>
 
       {/* Mandalart */}
-      <div className="mt-10 flex h-full w-full items-center justify-center">
+      <div className="mt-10 flex w-full items-center justify-center p-5">
         <Mandalart />
       </div>
 
